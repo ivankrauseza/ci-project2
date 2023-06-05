@@ -10,15 +10,23 @@
 <body>
     
     <header>
-        logo
+        <div>LOGO</div>
     </header>
 
     <section>
-        canvas
+        <canvas id="canvas"></canvas>
     </section>
 
     <section>
-        form
+
+        <form onsubmit="caption()">
+            <input type="text" name="caption" id="caption">
+            <button type="submit">Update</button>
+        </form>
+
+        <button type="button" onclick="download()">Download</button>
+        <button type="button" onclick="reset()">Reset</button>
+
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
