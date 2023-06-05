@@ -7,11 +7,15 @@
 body {
   margin: 0;
   text-align: center;
+  background-color: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgb(55, 55, 55) 0%, rgb(25, 25, 25) 100%);
+  color: #ccc;
 }
 
 a, button {
   transition: all 0.25s ease-in;
   cursor: pointer;
+  border: none;
 }
 
 header, section {
@@ -20,11 +24,17 @@ header, section {
 }
 
 header {
-  background-color: orange;
+  height: 80px;
+  line-height: 80px;
+}
+header .logo {
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px;
 }
 
 section {
-  background-color: purple;
   display: flex;
 }
 section div {
@@ -44,9 +54,6 @@ section div#edit canvas {
   max-height: 640px;
   background-color: red;
 }
-section div#caption {
-  background-color: teal;
-}
 section div#caption label {
   float: left;
   width: 100%;
@@ -64,9 +71,6 @@ section div#caption button {
   line-height: 45px;
   padding: 0 15px;
   border: none;
-}
-section div#process {
-  background-color: blue;
 }
 section div#process button {
   margin: 0 auto;

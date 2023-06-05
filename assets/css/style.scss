@@ -7,24 +7,37 @@
 body {
     margin: 0;
     text-align: center;
+    background-color: rgba(0,0,0,1);
+    background: radial-gradient(circle, rgba(55,55,55,1) 0%, rgba(25,25,25,1) 100%);
+    color: #ccc;
 }
 
 a, button {
     transition: all 0.25s ease-in;
     cursor: pointer;
+    border: none;
 }
 
+// HEADER & SECTION
 header, section {
     float:left;
     width: 100%;
 }
 
+// HEADER
 header {
-    background-color: orange;
+    height: 80px;
+    line-height: 80px;
+    .logo {
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        margin: 20px;
+    }
 }
 
+// SECTION
 section {
-    background-color: purple;
     display: flex;
 
     div {
@@ -46,7 +59,6 @@ section {
         }
 
         &#caption {
-            background-color: teal;
             label {
                 float: left;
                 width: 100%;
@@ -68,7 +80,6 @@ section {
         }
 
         &#process {
-            background-color: blue;
             button {
                 margin: 0 auto;
                 line-height: 45px;
