@@ -6,6 +6,12 @@
 
 body {
   margin: 0;
+  text-align: center;
+}
+
+a, button {
+  transition: all 0.25s ease-in;
+  cursor: pointer;
 }
 
 header, section {
@@ -19,4 +25,64 @@ header {
 
 section {
   background-color: purple;
+  display: flex;
+}
+section div {
+  margin: 0 auto;
+  clear: both;
+  width: 640px;
+  padding: 15px;
+}
+section div#edit {
+  background-color: yellow;
+}
+section div#edit canvas {
+  float: left;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  max-height: 640px;
+  background-color: red;
+}
+section div#caption {
+  background-color: teal;
+}
+section div#caption label {
+  float: left;
+  width: 100%;
+  font-size: 12px;
+  line-height: 30px;
+}
+section div#caption input {
+  margin: 0 auto;
+  line-height: 45px;
+  padding: 0 15px;
+  border: none;
+}
+section div#caption button {
+  margin: 0 auto;
+  line-height: 45px;
+  padding: 0 15px;
+  border: none;
+}
+section div#process {
+  background-color: blue;
+}
+section div#process button {
+  margin: 0 auto;
+  line-height: 45px;
+  padding: 0 15px;
+  border: none;
+}
+section div#process button#download {
+  margin: 5px;
+  background-color: teal;
+  color: #fff;
+}
+section div#process button#reset {
+  float: left;
+  width: 100%;
+  font-size: 12px;
+  background: none;
+  color: red;
 }/*# sourceMappingURL=style.css.map */

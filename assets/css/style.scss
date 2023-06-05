@@ -6,6 +6,12 @@
 
 body {
     margin: 0;
+    text-align: center;
+}
+
+a, button {
+    transition: all 0.25s ease-in;
+    cursor: pointer;
 }
 
 header, section {
@@ -19,4 +25,69 @@ header {
 
 section {
     background-color: purple;
+    display: flex;
+
+    div {
+        margin: 0 auto;
+        clear: both;
+        width: 640px;
+        padding: 15px;
+            
+        &#edit {
+            background-color: yellow;
+            canvas {
+                float: left;
+                width: 100%;
+                height: 100%;
+                max-width: 640px;
+                max-height: 640px;
+                background-color: red;
+            }
+        }
+
+        &#caption {
+            background-color: teal;
+            label {
+                float: left;
+                width: 100%;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            input {
+                margin: 0 auto;
+                line-height: 45px;
+                padding: 0 15px;
+                border: none;
+            }
+            button {
+                margin: 0 auto;
+                line-height: 45px;
+                padding: 0 15px;
+                border: none;
+            }
+        }
+
+        &#process {
+            background-color: blue;
+            button {
+                margin: 0 auto;
+                line-height: 45px;
+                padding: 0 15px;
+                border: none;
+                &#download {
+                    margin: 5px;
+                    background-color: teal;
+                    color: #fff;
+                }
+                &#reset {
+                    float: left;
+                    width: 100%;
+                    font-size: 12px;
+                    background: none;
+                    color: red;
+                }
+            }
+        }
+    }
+
 }

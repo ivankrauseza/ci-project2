@@ -14,18 +14,31 @@
     </header>
 
     <section>
-        <canvas id="canvas"></canvas>
+        
+        <div id="edit">
+            <canvas id="canvas"></canvas>
+        </div>
+
     </section>
 
     <section>
 
-        <form onsubmit="caption()">
-            <input type="text" name="caption" id="caption">
-            <button type="submit">Update</button>
-        </form>
+        <div id="caption">
+            <form onsubmit="caption()">
+                <label for="caption">ADD CAPTION (Max 26/26 Characters)</label>
+                <input type="text" name="caption" id="caption" maxlength="26" autocomplete="off">
+                <button type="submit">Update</button>
+            </form>
+        </div>
 
-        <button type="button" onclick="download()">Download</button>
-        <button type="button" onclick="reset()">Reset</button>
+    </section>
+
+    <section>
+
+        <div id="process">
+            <button id="download" type="button" onclick="download()">Download</button>
+            <button id="reset" type="button" onclick="reset()">Reset</button>
+        </div>
 
     </section>
 
