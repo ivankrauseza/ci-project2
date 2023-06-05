@@ -46,9 +46,29 @@ section div {
   clear: both;
   width: 640px;
   padding: 15px;
+  position: relative;
 }
 section div#edit {
   background-color: yellow;
+}
+section div#edit .file {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  background-color: #ccc;
+  color: #333;
+}
+section div#edit .file input {
+  visibility: hidden;
+}
+section div#edit .file i {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  font-size: 40px;
 }
 section div#edit canvas {
   float: left;

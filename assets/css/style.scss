@@ -50,9 +50,31 @@ section {
         clear: both;
         width: 640px;
         padding: 15px;
+        position: relative;
             
         &#edit {
             background-color: yellow;
+            
+            .file {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                cursor: pointer;
+                background-color: #ccc;
+                color: #333;
+                input {
+                    visibility: hidden;
+                }
+                i {
+                    width: 40px;
+                    height: 40px;
+                    margin: 5px;
+                    font-size: 40px;
+                }
+            }
+            
             canvas {
                 float: left;
                 width: 100%;

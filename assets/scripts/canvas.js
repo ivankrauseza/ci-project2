@@ -79,8 +79,16 @@ function caption() {
 
 // DRAW THE FINAL CANVAS
 function draw() {
-    console.log('draw');
-    caption();
+
+    ctx.drawImage(
+        uploadFile,
+        0,
+        0,
+        imgWdt,
+        imgHgt
+    );
+    
+    caption(); // Then draw caption
 }
 
 
