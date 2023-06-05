@@ -51,18 +51,31 @@ imgInput.addEventListener('change', function(e) {
 });
 
 // ADD CAPTION TO THE CANVAS
+let captionText = "This is the caption";
 function caption() {
-    //console.log('caption');
-    ctx.font = "65px Impact";
-    ctx.textAlign = "center";
+    // Draw solid text
+    ctx.font = "65px Impact"; // Font size and family
+    ctx.textAlign = "center"; // Draw start point
     ctx.textBaseline = "top";
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "white"; // Text color
     ctx.fillText(
-        "This is the caption".toUpperCase(), // Text content
+        captionText.toUpperCase(), // Text content
         canvas.width / 2, // Start left
-        0, // Start Top
+        canvas.height / 100 * 80, // Start Top
+    )
+    // Draw the outline
+    ctx.font = "65px Impact"; // Font size and family
+    ctx.textAlign = "center"; // Draw start point
+    ctx.textBaseline = "top";
+    ctx.lineWidth = 2; // Text color
+    ctx.strokeStyle = "black";
+    ctx.strokeText(
+        captionText.toUpperCase(), // Text content
+        canvas.width / 2, // Start left
+        canvas.height / 100 * 80, // Start Top
     )
 }
+
 
 // DRAW THE FINAL CANVAS
 function draw() {
@@ -70,15 +83,18 @@ function draw() {
     caption();
 }
 
+
 // DOWNLOAD THE FINAL DRAWING
 function download() {
     console.log('download');
 }
 
+
 // RESET THE CANVAS
 function reset() {
     console.log('reset');
 }
+
 
 // DEFAULT ONLOAD
 window.onload = () => {
