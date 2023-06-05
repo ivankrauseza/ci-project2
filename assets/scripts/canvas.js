@@ -170,11 +170,21 @@ function draw() {
     );
 }
 
+
+// UPDATE CAPTION TEXT
 let textInput = document.getElementById('caption');
 textInput.addEventListener('change', function(e) {
     InsertText = e.target.value;
     draw();
 });
+
+
+// COUNT CAPTION TEXT
+let countChar = document.getElementById('caption');
+let charCount = document.getElementById('charCount');
+countChar.onkeyup = function() {
+    charCount.innerText = countChar.value.length;
+}
 
 
 // DOWNLOAD THE FINAL DRAWING
