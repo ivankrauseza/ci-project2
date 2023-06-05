@@ -160,13 +160,33 @@ function draw() {
 
 // DOWNLOAD THE FINAL DRAWING
 function download() {
-    console.log('download');
+    
+    if(localStorage.getItem('orientation') == null) {
+        alert('no image');
+    }
+    else {
+        const download = document.createElement("div");
+        download.classList.add("overlay");
+        download.innerText = "Downloading";
+        document.body.appendChild(download);
+
+        setTimeout(() => {
+            let fileName = Date.now();
+            let anchor = document.createElement('a');
+            anchor.href = canvas.toDataURL('image/jpeg', 1);
+            anchor.download = fileName+"_image.jpg";
+            anchor.click();
+
+            reset();
+        }, 5000);
+    }
+
 }
 
 
 // RESET THE CANVAS
 function reset() {
-    console.log('reset');
+    window.location.reload();
 }
 
 
