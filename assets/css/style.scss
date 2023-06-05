@@ -38,6 +38,10 @@ header {
         height: 40px;
         line-height: 40px;
         margin: 20px;
+        img {
+            width: auto;
+            height: 40px;
+        }
     }
 }
 
@@ -53,7 +57,6 @@ section {
         position: relative;
             
         &#edit {
-            background-color: yellow;
             
             .file {
                 width: 50px;
@@ -62,7 +65,7 @@ section {
                 top: 15px;
                 left: 15px;
                 cursor: pointer;
-                background-color: #ccc;
+                background-color: #f8473f;
                 color: #333;
                 input {
                     visibility: hidden;
@@ -81,11 +84,17 @@ section {
                 height: 100%;
                 max-width: 640px;
                 max-height: 640px;
-                background-color: red;
+                box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
+                -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
+                -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
+                background-color: #333;
+                background-image: url('../img/placeholder.png');
+                background-size: cover;
             }
         }
 
-        &#caption {
+        &.caption {
+            position: relative;
             label {
                 float: left;
                 width: 100%;
@@ -93,16 +102,25 @@ section {
                 line-height: 30px;
             }
             input {
-                margin: 0 auto;
+                float: left;
                 line-height: 45px;
                 padding: 0 15px;
                 border: none;
+                width: calc(100% - 45px);
+                background-color: #231F20;
+                border: 2px solid #656565;
+                color:#08B6C1;
+                font-size: 20px;
+                text-transform: uppercase;
+                outline: none;
             }
             button {
+                float: left;
+                width: 45px;
                 margin: 0 auto;
                 line-height: 45px;
                 padding: 0 15px;
-                border: none;
+                border: 2px solid #fff;
             }
         }
 
@@ -114,15 +132,18 @@ section {
                 border: none;
                 &#download {
                     margin: 5px;
-                    background-color: teal;
+                    background-color: #08B6C1;
                     color: #fff;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                    font-weight: bold;
                 }
                 &#reset {
                     float: left;
                     width: 100%;
                     font-size: 12px;
                     background: none;
-                    color: red;
+                    color: #f8473f;
                 }
             }
         }
@@ -134,7 +155,7 @@ section {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: #f8473f;
     z-index: 3;
     display: flex;
     align-items: center;

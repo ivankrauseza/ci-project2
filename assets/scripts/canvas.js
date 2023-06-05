@@ -5,6 +5,11 @@ canvas.height = 1024;
 const centerX = canvas.width / 2;
 const centerY = canvas.height / 2;
 
+
+// WATERMARK
+let watermark = new Image();
+watermark.src = "./assets/img/watermark.png";
+
 // READ IMAGE DATA
 let uploadFile = new Image(); // This is the image for the canvas.
 let imgWdt;
@@ -62,7 +67,7 @@ imgInput.addEventListener('change', function(e) {
 });
 
 // ADD CAPTION TO THE CANVAS
-let captionText = "This is the caption";
+let InsertText = "";
 function caption() {
     // Draw solid text
     ctx.font = "65px Impact"; // Font size and family
@@ -70,7 +75,7 @@ function caption() {
     ctx.textBaseline = "top";
     ctx.fillStyle = "white"; // Text color
     ctx.fillText(
-        captionText.toUpperCase(), // Text content
+        InsertText.toUpperCase(), // Text content
         canvas.width / 2, // Start left
         canvas.height / 100 * 80, // Start Top
     )
@@ -81,7 +86,7 @@ function caption() {
     ctx.lineWidth = 2; // Text color
     ctx.strokeStyle = "black";
     ctx.strokeText(
-        captionText.toUpperCase(), // Text content
+        InsertText.toUpperCase(), // Text content
         canvas.width / 2, // Start left
         canvas.height / 100 * 80, // Start Top
     )
@@ -155,7 +160,21 @@ function draw() {
     );
     
     caption(); // Then draw caption
+
+    ctx.drawImage(
+        watermark,
+        canvas.width - 165, // LEFT
+        canvas.height - 50, // TOP
+        142.4341, // WDT
+        25.8162 // HGT
+    );
 }
+
+let textInput = document.getElementById('caption');
+textInput.addEventListener('change', function(e) {
+    InsertText = e.target.value;
+    draw();
+});
 
 
 // DOWNLOAD THE FINAL DRAWING
