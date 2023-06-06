@@ -16,8 +16,8 @@ body {
   margin: 0;
   text-align: center;
   background-color: rgb(0, 0, 0);
-  background: radial-gradient(circle, rgb(55, 55, 55) 0%, rgb(25, 25, 25) 100%);
-  color: #ccc;
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(235, 235, 235) 100%);
+  color: #231F20;
 }
 
 a, button {
@@ -45,28 +45,37 @@ header, section, footer {
   width: 100%;
 }
 
-header {
+body > header {
   height: 80px;
   line-height: 80px;
+  position: relative;
 }
-header .logo {
+body > header .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: auto;
-  height: 40px;
-  line-height: 40px;
-  margin: 20px;
+  height: 50px;
 }
-header .logo img {
-  width: auto;
-  height: 40px;
+body > header .logo img {
+  width: 100%;
+  max-width: 280px;
 }
 
 section {
   display: inline-block;
 }
+section header {
+  padding: 30px 0 0 0;
+}
 section div {
   margin: 0 auto;
   clear: both;
-  width: 640px;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  max-height: 640px;
   padding: 15px;
   position: relative;
 }
@@ -75,10 +84,9 @@ section div#edit canvas {
   float: left;
   width: 100%;
   height: 100%;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-  background-color: #333;
+  max-width: 640px;
+  max-height: 640px;
+  background-color: #231F20;
   background-image: url("../img/placeholder.png");
   background-size: contain;
 }
@@ -91,7 +99,7 @@ section div#edit .file {
   left: 15px;
   cursor: pointer;
   background-color: #f8473f;
-  color: #333;
+  color: #231F20;
 }
 section div#edit .file input {
   visibility: hidden;
@@ -142,7 +150,10 @@ footer {
 footer div {
   margin: 0 auto;
   clear: both;
-  width: 640px;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  max-height: 640px;
   padding: 15px;
   position: relative;
 }
@@ -155,17 +166,24 @@ footer div#process button {
 }
 footer div#process button#download {
   margin: 5px;
-  background-color: #08B6C1;
+  background-color: #057F87;
   color: #fff;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: bold;
 }
+footer div#process button#download:hover {
+  background-color: #08B6C1;
+}
 footer div#process button#reset {
   float: left;
   width: 100%;
-  font-size: 12px;
+  font-size: 1em;
+  font-weight: bold;
   background: none;
+  color: #C63832;
+}
+footer div#process button#reset:hover {
   color: #f8473f;
 }
 footer div#process button:hover {
@@ -177,8 +195,9 @@ footer div#process button:hover {
   width: 100%;
   height: 100%;
   background-color: #f8473f;
-  z-index: 3;
+  z-index: 5;
   display: flex;
   align-items: center;
   text-align: center;
+  padding: 15px;
 }/*# sourceMappingURL=style.css.map */

@@ -70,7 +70,7 @@ imgInput.addEventListener('change', function(e) {
 let InsertText = "";
 function caption() {
     // Draw solid text
-    ctx.font = "65px Impact"; // Font size and family
+    ctx.font = "bold 65px Arial"; // Font size and family
     ctx.textAlign = "center"; // Draw start point
     ctx.textBaseline = "top";
     ctx.fillStyle = "white"; // Text color
@@ -80,7 +80,7 @@ function caption() {
         canvas.height / 100 * 80, // Start Top
     )
     // Draw the outline
-    ctx.font = "65px Impact"; // Font size and family
+    ctx.font = "bold 65px Arial"; // Font size and family
     ctx.textAlign = "center"; // Draw start point
     ctx.textBaseline = "top";
     ctx.lineWidth = 2; // Text color
@@ -207,7 +207,7 @@ function download() {
             anchor.click();
 
             reset();
-        }, 5000);
+        }, 1500);
     }
 
 }
