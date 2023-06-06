@@ -55,10 +55,13 @@ Testing completed on Chrome, Firefox, Edge, Android.
 ---
 
 ## VALIDATION
-W3C  
+HTML  
+![Screenshot](/assets/img/test-w3c-html.jpg)  
+[HTML Test Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivankrauseza.github.io%2Fci-project2%2F)  
 
 CSS  
 ![Screenshot](/assets/img/test-w3c-css.jpg)  
+[CSS Test Link](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fivankrauseza.github.io%2Fci-project2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)  
 
 JS    
 

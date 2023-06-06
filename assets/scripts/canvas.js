@@ -188,7 +188,7 @@ countChar.onkeyup = function() {
 
 
 // DOWNLOAD THE FINAL DRAWING
-function download() {
+function save() {
     
     if(localStorage.getItem('orientation') == null) {
         alert('no image');
