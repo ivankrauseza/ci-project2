@@ -26,6 +26,20 @@ a, button {
   border: none;
 }
 
+h1, h2, h3 {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
 header, section {
   float: left;
   width: 100%;
@@ -47,7 +61,7 @@ header .logo img {
 }
 
 section {
-  display: flex;
+  display: inline-block;
 }
 section div {
   margin: 0 auto;
@@ -56,7 +70,20 @@ section div {
   padding: 15px;
   position: relative;
 }
+section div#edit canvas {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+  background-color: #333;
+  background-image: url("../img/placeholder.png");
+  background-size: contain;
+}
 section div#edit .file {
+  z-index: 4;
   width: 50px;
   height: 50px;
   position: absolute;
@@ -75,19 +102,6 @@ section div#edit .file i {
   margin: 5px;
   font-size: 40px;
 }
-section div#edit canvas {
-  float: left;
-  width: 100%;
-  height: 100%;
-  max-width: 640px;
-  max-height: 640px;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-  background-color: #333;
-  background-image: url("../img/placeholder.png");
-  background-size: cover;
-}
 section div.caption {
   position: relative;
 }
@@ -96,6 +110,9 @@ section div.caption label {
   width: 100%;
   font-size: 12px;
   line-height: 30px;
+}
+section div.caption label span {
+  color: #08B6C1;
 }
 section div.caption input {
   float: left;
@@ -123,6 +140,7 @@ section div#process button {
   line-height: 45px;
   padding: 0 15px;
   border: none;
+  opacity: 0.9;
 }
 section div#process button#download {
   margin: 5px;
@@ -138,6 +156,9 @@ section div#process button#reset {
   font-size: 12px;
   background: none;
   color: #f8473f;
+}
+section div#process button:hover {
+  opacity: 1;
 }
 
 .overlay {

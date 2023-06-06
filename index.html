@@ -16,21 +16,21 @@
     </header>
 
     <section>
-        
-        <div id="edit">
+        <h2>Upload your image</h2>
+        <div id="edit">  
+            <canvas id="canvas"></canvas>
             <label class="file" for="file">
                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                 <input type="file" id="file">
             </label>
-            <canvas id="canvas"></canvas>
         </div>
 
     </section>
 
     <section>
-
         <div class="caption">
-                <label for="caption">ADD CAPTION (Max <span id="charCount">0</span>/26 Characters)</label>
+            <h3>Add caption</h3>
+                <label for="caption">(Max <span id="charCount">0</span>/26 Characters)</label>
                 <input type="text" name="caption" id="caption" maxlength="26" autocomplete="off">
                 <button type="button">
                     <i class="fa fa-paper-plane" aria-hidden="true"></i>
