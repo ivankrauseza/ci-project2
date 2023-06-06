@@ -33,14 +33,14 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 h3 {
   font-size: 1em;
 }
 
-header, section {
+header, section, footer {
   float: left;
   width: 100%;
 }
@@ -135,14 +135,25 @@ section div.caption button {
   padding: 0 15px;
   border: 2px solid #fff;
 }
-section div#process button {
+
+footer {
+  display: inline-block;
+}
+footer div {
+  margin: 0 auto;
+  clear: both;
+  width: 640px;
+  padding: 15px;
+  position: relative;
+}
+footer div#process button {
   margin: 0 auto;
   line-height: 45px;
   padding: 0 15px;
   border: none;
   opacity: 0.9;
 }
-section div#process button#download {
+footer div#process button#download {
   margin: 5px;
   background-color: #08B6C1;
   color: #fff;
@@ -150,14 +161,14 @@ section div#process button#download {
   text-transform: uppercase;
   font-weight: bold;
 }
-section div#process button#reset {
+footer div#process button#reset {
   float: left;
   width: 100%;
   font-size: 12px;
   background: none;
   color: #f8473f;
 }
-section div#process button:hover {
+footer div#process button:hover {
   opacity: 1;
 }
 

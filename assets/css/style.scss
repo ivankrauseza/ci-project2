@@ -33,14 +33,14 @@ h1, h2, h3 {
     text-align: center;
 }
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 h3 {
     font-size: 1em;
 }
 
 // HEADER & SECTION
-header, section {
+header, section, footer {
     float:left;
     width: 100%;
 }
@@ -143,6 +143,19 @@ section {
             }
         }
 
+    }
+
+}
+
+footer {
+    display: inline-block;
+
+    div {
+        margin: 0 auto;
+        clear: both;
+        width: 640px;
+        padding: 15px;
+        position: relative;
         &#process {
             button {
                 margin: 0 auto;
@@ -171,7 +184,6 @@ section {
             }
         }
     }
-
 }
 
 .overlay {
